@@ -1,0 +1,5 @@
+foreach(z_vcpkg_curl_component IN ITEMS SSL IPv6 unixsockets libz AsynchDNS Largefile alt-svc HSTS HTTP HTTPS)
+  if(z_vcpkg_curl_component MATCHES "^[-_a-zA-Z0-9]*$")
+    set(CURL_${z_vcpkg_curl_component}_FOUND TRUE)
+  endif()
+endforeach()
